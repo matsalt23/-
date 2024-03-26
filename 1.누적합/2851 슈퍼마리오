@@ -17,11 +17,11 @@
 출력
 첫째 줄에 마리오가 받는 점수를 출력한다. 만약 100에 가까운 수가 2개라면 (예: 98, 102) 마리오는 큰 값을 선택한다.
 '''
-s=0
-z=0
+s = 0 # 누적합
+z = 0 # 판별여부 (0이면 통과 1이면 stop 후 출력)
 for _ in range(10):
-    a=int(input())
-    b=s+a
-    if abs(100-s)>=abs(100-b) and z==0: s=b
+    a = int(input())
+    b = s+a
+    if abs(100-s) >= abs(100-b) and z==0: s=b
     else: z=1
 print(s)
